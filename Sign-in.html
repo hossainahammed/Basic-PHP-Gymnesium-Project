@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gym Membership Sign-Up</title>
+    <link rel="stylesheet" href="CSS/gym-signup.css"/>
+    <style>
+        body {
+            background-color: #f0f2f5;
+        }
+    </style>
+</head>
+<body>
+    <section> 
+        <div class="form-box">
+            <div class="form-value">
+                <form action="PHP/code.php" method="POST" autocomplete="on" >
+                    <h2>Gym Membership Sign-Up</h2><br>
+                    
+                    <div class="inputbox">
+                        <label for="fullname">Full Name</label> 
+                        <input type="text" name="fullname" id="fullname" placeholder="Enter your full name" required><br> 
+                    </div>
+                    <br>
+                    
+                    <div class="inputbox">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" placeholder="Enter valid email address" required>
+                    </div>
+                    <br> 
+                    
+                    <div class="inputbox">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" name="phone" id="phone" placeholder="Enter your phone number" required>
+                    </div>
+                    <br>
+                    
+                    <div class="inputbox">
+                        <label for="dob">Date of Birth</label>
+                        <input type="date" name="dob" id="dob" required>
+                    </div>
+                    <br>
+                    
+                    <div class="inputbox">
+                        <label for="gender">Gender</label>
+                        <input type="radio" name="gender" id="genderM" value="Male" required>
+                        <label for="genderM">Male</label>
+                        <input type="radio" name="gender" id="genderF" value="Female" required>
+                        <label for="genderF">Female</label>
+                        <input type="radio" name="gender" id="genderO" value="Other" required>
+                        <label for="genderO">Other</label>
+                    </div>
+                    <br>
+                    
+                    <div class="inputbox">
+                        <label for="membership">Membership Type</label>
+                        <select name="membership" id="membership" required>
+                            <option value="" disabled selected>Select membership</option>
+                            <option value="basic">Basic (1500/-month)</option>
+                            <option value="standard">Standard (2500/-month)</option>
+                            <option value="premium">Premium (4000/-month)</option>
+                            <option value="annual">Annual Membership (35000/-year)</option>
+                        </select>
+                    </div>
+                    <br>
+                    
+                    <div class="inputbox">
+                        <label for="goals">Fitness Goals</label><br>
+            
+                        <input type="checkbox" name="goals[]" id="weightloss" value="Weight Loss">
+                        <label for="weightloss">Weight Loss</label>
+                        
+                        <input type="checkbox" name="goals[]" id="musclegain" value="Muscle Gain">
+                        <label for="musclegain">Muscle Gain</label>
+                        
+                        <input type="checkbox" name="goals[]" id="general" value="General Fitness">
+                        <label for="general">General Fitness</label>
+                        
+                        <input type="checkbox" name="goals[]" id="rehab" value="Rehabilitation">
+                        <label for="rehab">Rehabilitation</label>
+                        
+                    </div>
+                    <br>
+                    
+                    <div class="inputbox">
+                        <label for="health">Any Medical Conditions?</label>
+                        <textarea name="health" id="health" rows="3" placeholder="Describe any health issues if applicable"></textarea>
+                    </div>
+                    <br>
+                    
+                    <div class="inputbox">
+                        <label for="photo">Upload Photo ID:</label>
+                        <input type="file" name="photo" id="photo" accept="image/*" required>
+                    </div>
+                    <br>
+                    
+                    <div class="inputbox">
+                        <input type="checkbox" name="terms" id="terms" required>
+                        <label for="terms">I agree to the <a href="#" onclick="window.open('terms.html', '_blank')">Terms and Conditions</a></label>
+                    </div>
+                    <br>
+                    
+                    <input type="submit" value="Sign Up">
+                    <br>
+                    <a href="index.html" class="register-link">Already a member? Sign In</a>
+                </form>
+            </div>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
