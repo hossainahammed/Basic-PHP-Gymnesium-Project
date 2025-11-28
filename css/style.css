@@ -114,7 +114,7 @@ login-button:hover {
 
 .img {
     height: 500px;
-    background-image:url('image/theme.jpg');
+    background-image:url('./image/theme.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
